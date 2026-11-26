@@ -353,7 +353,9 @@ if (values['all-workspaces']) {
       direction: 'dependents',
       depTypes: 'all',
       inclusive: true,
-    }).forEach((value) => affectedSet.add(value));
+    }).forEach((value) => {
+      affectedSet.add(value);
+    });
   });
   filteredWorkspaces = [...affectedSet];
 }
@@ -372,13 +374,17 @@ if (values.list || values['list-dependencies']) {
           direction: 'dependents',
           depTypes: values['dep-types'],
           inclusive: true,
-        }).forEach((name) => deps.add(name));
+        }).forEach((name) => {
+          deps.add(name);
+        });
       } else if (values['list-dependencies']) {
         findRelatedWorkspaces(workspaceName, {
           direction: 'dependencies',
           depTypes: values['dep-types'],
           inclusive: true,
-        }).forEach((name) => deps.add(name));
+        }).forEach((name) => {
+          deps.add(name);
+        });
       }
     });
     filteredWorkspaces = [...deps];

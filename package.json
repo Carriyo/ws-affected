@@ -26,7 +26,7 @@
   },
   "homepage": "https://github.com/Munawwar/ws-affected#readme",
   "devDependencies": {
-    "@biomejs/biome": "1.8.1"
+    "@biomejs/biome": "2.6.9"
   },
   "scripts": {
     "lint": "npx @biomejs/biome check ws-affected.mjs test",
